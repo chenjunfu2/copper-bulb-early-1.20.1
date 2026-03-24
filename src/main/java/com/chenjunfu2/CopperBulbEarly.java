@@ -18,6 +18,5 @@ public class CopperBulbEarly implements ModInitializer {
 	public void onInitialize() {
 		RegistriesBlocks.RegistriesBlocks();
 		ModSoundEvents.registerSounds();
-		ItemGroupEvents.modifyEntriesEvent(ItemGroups.REDSTONE).register(content->content.addAfter(Blocks.DROPPER,RegistriesBlocks.COPPER_BULB));
 	}
 }
