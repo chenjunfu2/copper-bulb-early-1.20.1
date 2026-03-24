@@ -3,11 +3,11 @@
   "category": "building",
   "group": "waxed_weathered_copper_bulb",
   "ingredients": [
-    "minecraft:weathered_copper_bulb",
-    "minecraft:honeycomb"
+    {"item": "minecraft:weathered_copper_bulb"},
+    {"item": "minecraft:honeycomb"}
   ],
   "result": {
     "count": 1,
-    "id": "minecraft:waxed_weathered_copper_bulb"
+    "item": "minecraft:waxed_weathered_copper_bulb"
   }
 }

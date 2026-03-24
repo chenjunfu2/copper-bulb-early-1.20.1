@@ -13,7 +13,7 @@ public class CopperBulbEarly implements ModInitializer {
 
 	@Override
 	public void onInitialize() {
+		SoundEvents.registerSoundEvents();
 		RegistriesBlocks.RegistriesBlocks();
-		SoundEvents.registerSounds();
 	}
 }

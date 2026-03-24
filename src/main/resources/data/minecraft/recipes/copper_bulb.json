@@ -2,9 +2,9 @@
   "type": "minecraft:crafting_shaped",
   "category": "redstone",
   "key": {
-    "B": "minecraft:blaze_rod",
-    "C": "minecraft:copper_block",
-    "R": "minecraft:redstone"
+    "B": {"item": "minecraft:blaze_rod"},
+    "C": {"item": "minecraft:copper_block"},
+    "R": {"item": "minecraft:redstone"}
   },
   "pattern": [
     " C ",
@@ -13,6 +13,6 @@
   ],
   "result": {
     "count": 4,
-    "id": "minecraft:copper_bulb"
+    "item": "minecraft:copper_bulb"
   }
 }

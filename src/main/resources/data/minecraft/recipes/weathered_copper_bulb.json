@@ -2,9 +2,9 @@
   "type": "minecraft:crafting_shaped",
   "category": "redstone",
   "key": {
-    "B": "minecraft:blaze_rod",
-    "C": "minecraft:weathered_copper",
-    "R": "minecraft:redstone"
+    "B": {"item": "minecraft:blaze_rod"},
+    "C": {"item": "minecraft:weathered_copper"},
+    "R": {"item": "minecraft:redstone"}
   },
   "pattern": [
     " C ",
@@ -13,6 +13,6 @@
   ],
   "result": {
     "count": 4,
-    "id": "minecraft:weathered_copper_bulb"
+    "item": "minecraft:weathered_copper_bulb"
   }
 }

@@ -13,4 +13,6 @@ public class BlockSoundGroup
 		SoundEvents.BLOCK_COPPER_BULB_HIT,
 		SoundEvents.BLOCK_COPPER_BULB_FALL
 	);
+	
+	public static void registerBlockSoundGroup() {}
 }
