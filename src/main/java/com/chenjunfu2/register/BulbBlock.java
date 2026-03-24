@@ -1,4 +1,4 @@
-package com.rlint.register;
+package com.chenjunfu2.register;
 
 import net.minecraft.block.Block;
 import net.minecraft.block.BlockState;
@@ -6,7 +6,6 @@ import net.minecraft.server.world.ServerWorld;
 import net.minecraft.sound.SoundCategory;
 import net.minecraft.state.StateManager;
 import net.minecraft.state.property.BooleanProperty;
-import net.minecraft.state.property.Properties;
 import net.minecraft.util.math.BlockPos;
 import net.minecraft.world.World;
 
@@ -50,7 +49,7 @@ public class BulbBlock extends Block {
             if (!(Boolean)state.get(POWERED)) {
                 blockState = state.cycle(LIT);
                 try{
-                    world.playSound(null, pos, blockState.get(LIT) ? MySoundEvent.BLOCK_COPPER_BULB_TURN_ON : MySoundEvent.BLOCK_COPPER_BULB_TURN_OFF, SoundCategory.BLOCKS);
+                    world.playSound(null, pos, blockState.get(LIT) ? ModSoundEvents.BLOCK_COPPER_BULB_TURN_ON : ModSoundEvents.BLOCK_COPPER_BULB_TURN_OFF, SoundCategory.BLOCKS);
                 }catch(Exception e){
                     e.printStackTrace();
                 }

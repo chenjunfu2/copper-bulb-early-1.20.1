@@ -1,39 +1,30 @@
 {
 	"schemaVersion": 1,
-	"id": "bulb-early",
+	"id": "copper-bulb-early",
 	"version": "${version}",
-	"name": "Bulb Early",
-	"description": "Bulb Early (Make 1.20.1 Great Again)",
+	"name": "Copper Bulb Early",
+	"description": "Copper Bulb Early",
 	"authors": [
-		"Rlin96"
+		"Rlin96",
+        "chenjunfu2"
 	],
 	"contact": {
-		"homepage": "https://rlint.cn/",
-		"sources": "https://github.com/Rczlin/bulb-early-1.20.1"
+		"homepage": "NULL",
+		"sources": "https://github.com/chenjunfu2/copper-bulb-early-1.20.1"
 	},
 	"license": "CC0-1.0",
-	"icon": "assets/bulb-early/icon.png",
+	"icon": "assets/copper-bulb-early/icon.png",
 	"environment": "*",
 	"entrypoints": {
 		"main": [
-			"com.rlint.BulbEarly"
-		],
-		"client": [
-			"com.rlint.BulbEarlyClient"
-		],
-		"fabric-datagen": [
-			"com.rlint.BulbEarlyDataGenerator"
+          "com.chenjunfu2.CopperBulbEarly"
 		]
 	},
 	"mixins": [
-		"bulb-early.mixins.json",
-		{
-			"config": "bulb-early.client.mixins.json",
-			"environment": "client"
-		}
+		"copper-bulb-early.mixins.json"
 	],
 	"depends": {
-		"fabricloader": ">=0.16.14",
+		"fabricloader": ">=0.16.10",
 		"minecraft": "~1.20.1",
 		"java": ">=17",
 		"fabric-api": "*"

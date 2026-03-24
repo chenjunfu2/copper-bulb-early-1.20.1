@@ -1,6 +1,5 @@
-package com.rlint.register;
+package com.chenjunfu2.register;
 
-import net.fabricmc.fabric.api.item.v1.FabricItemSettings;
 import net.fabricmc.fabric.api.itemgroup.v1.ItemGroupEvents;
 import net.minecraft.block.*;
 import net.minecraft.item.BlockItem;
@@ -8,8 +7,6 @@ import net.minecraft.item.Item;
 import net.minecraft.item.ItemGroups;
 import net.minecraft.registry.Registries;
 import net.minecraft.registry.Registry;
-import net.minecraft.registry.RegistryKey;
-import net.minecraft.sound.BlockSoundGroup;
 import net.minecraft.state.property.Properties;
 import net.minecraft.util.Identifier;
 
@@ -94,7 +91,7 @@ public class RegistriesBlocks {
     public static final Block COPPER_BULB = register("copper_bulb", new BulbBlock(AbstractBlock.Settings.create()
             .mapColor(COPPER_BLOCK.getDefaultMapColor())
             .strength(3.0F, 6.0F)
-            .sounds(MySoundEvent.COPPER_BULB)
+            .sounds(ModSoundEvents.COPPER_BULB)
             .requiresTool()
             .solidBlock(Blocks::never)
             .luminance(createLightLevelFromLitBlockState(15)
@@ -105,7 +102,7 @@ public class RegistriesBlocks {
     public static final Block OXIDIZED_COPPER_BULB = register("oxidized_copper_bulb", new BulbBlock(AbstractBlock.Settings.create()
                     .mapColor(MapColor.TEAL)
                     .strength(3.0F, 6.0F)
-                    .sounds(MySoundEvent.COPPER_BULB)
+                    .sounds(ModSoundEvents.COPPER_BULB)
                     .requiresTool()
                     .solidBlock(Blocks::never)
                     .luminance(createLightLevelFromLitBlockState(4)

@@ -1,9 +1,9 @@
 {
 	"required": true,
-	"package": "com.rlint.mixin.client",
+	"package": "com.chenjunfu2.mixin",
 	"compatibilityLevel": "JAVA_17",
-	"client": [
-		"ExampleClientMixin"
+	"mixins": [
+		"ExampleMixin"
 	],
 	"injectors": {
 		"defaultRequire": 1
