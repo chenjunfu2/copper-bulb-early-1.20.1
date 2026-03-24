@@ -1,6 +1,6 @@
 package com.chenjunfu2.blocks;
 
-import com.chenjunfu2.sounds.BlockSoundGroup;
+import com.chenjunfu2.sounds.ModBlockSoundGroup;
 import net.fabricmc.fabric.api.itemgroup.v1.ItemGroupEvents;
 import net.minecraft.block.*;
 import net.minecraft.item.BlockItem;
@@ -29,7 +29,7 @@ public class RegistriesBlocks
 			AbstractBlock.Settings.create()
 				.mapColor(COPPER_BLOCK.getDefaultMapColor())
 				.strength(3.0F, 6.0F)
-				.sounds(BlockSoundGroup.COPPER_BULB)
+				.sounds(ModBlockSoundGroup.COPPER_BULB)
 				.requiresTool()
 				.solidBlock(Blocks::never)
 				.luminance(createLightLevelFromLitBlockState(15)

@@ -1,13 +1,13 @@
-package com.chenjunfu2.blocks;
+package com.chenjunfu2.sounds;
 
-import com.chenjunfu2.CopperBulbEarly;
-import com.chenjunfu2.sounds.BlockSoundGroup;
 import net.minecraft.registry.Registries;
 import net.minecraft.registry.Registry;
 import net.minecraft.sound.SoundEvent;
 import net.minecraft.util.Identifier;
 
-public class SoundEvents
+import static com.chenjunfu2.CopperBulbEarly.MOD_ID;
+
+public class ModSoundEvents
 {
 	public static final SoundEvent BLOCK_COPPER_BULB_BREAK = register("block.copper_bulb.break");
 	public static final SoundEvent BLOCK_COPPER_BULB_STEP = register("block.copper_bulb.step");
@@ -19,12 +19,12 @@ public class SoundEvents
 
     private static SoundEvent register(String name)
 	{
-        final Identifier id = new Identifier(CopperBulbEarly.MOD_ID, name);
+        Identifier id = new Identifier(MOD_ID, name);
         return Registry.register(Registries.SOUND_EVENT, id, SoundEvent.of(id));
     }
 
     public static void registerSoundEvents()
 	{
-		BlockSoundGroup.registerBlockSoundGroup();
+		ModBlockSoundGroup.registerBlockSoundGroup();
 	}
 }

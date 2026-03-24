@@ -1,5 +1,5 @@
 {
-  "copper_bulb.break": {
+  "block.copper_bulb.break": {
     "sounds": [
       "copper-bulb-early:block/break1",
       "copper-bulb-early:block/break2",
@@ -8,7 +8,7 @@
     ],
     "subtitle": "subtitles.block.generic.break"
   },
-  "copper_bulb.fall": {
+  "block.copper_bulb.fall": {
     "sounds": [
       "copper-bulb-early:block/step1",
       "copper-bulb-early:block/step2",
@@ -18,7 +18,7 @@
       "copper-bulb-early:block/step6"
     ]
   },
-  "copper_bulb.hit": {
+  "block.copper_bulb.hit": {
     "sounds": [
       "copper-bulb-early:block/step1",
       "copper-bulb-early:block/step2",
@@ -29,7 +29,7 @@
     ],
     "subtitle": "subtitles.block.generic.hit"
   },
-  "copper_bulb.place": {
+  "block.copper_bulb.place": {
     "sounds": [
       "copper-bulb-early:block/place1",
       "copper-bulb-early:block/place2",
@@ -38,7 +38,7 @@
     ],
     "subtitle": "subtitles.block.generic.place"
   },
-  "copper_bulb.step": {
+  "block.copper_bulb.step": {
     "sounds": [
       "copper-bulb-early:block/step1",
       "copper-bulb-early:block/step2",
@@ -49,7 +49,7 @@
     ],
     "subtitle": "subtitles.block.generic.footsteps"
   },
-  "copper_bulb.turn_off": {
+  "block.copper_bulb.turn_off": {
     "sounds": [
       {
         "attenuation_distance": 6,
@@ -59,7 +59,7 @@
     ],
     "subtitle": "subtitles.block.copper_bulb.turn_off"
   },
-  "copper_bulb.turn_on": {
+  "block.copper_bulb.turn_on": {
     "sounds": [
       {
         "attenuation_distance": 6,

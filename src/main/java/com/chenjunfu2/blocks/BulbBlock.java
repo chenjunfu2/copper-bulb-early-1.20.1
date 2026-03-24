@@ -1,5 +1,6 @@
 package com.chenjunfu2.blocks;
 
+import com.chenjunfu2.sounds.ModSoundEvents;
 import net.minecraft.block.Block;
 import net.minecraft.block.BlockState;
 import net.minecraft.server.world.ServerWorld;
@@ -49,7 +50,7 @@ public class BulbBlock extends Block {
             if (!(Boolean)state.get(POWERED)) {
                 blockState = state.cycle(LIT);
                 try{
-                    world.playSound(null, pos, blockState.get(LIT) ? SoundEvents.BLOCK_COPPER_BULB_TURN_ON : SoundEvents.BLOCK_COPPER_BULB_TURN_OFF, SoundCategory.BLOCKS);
+                    world.playSound(null, pos, blockState.get(LIT) ? ModSoundEvents.BLOCK_COPPER_BULB_TURN_ON : ModSoundEvents.BLOCK_COPPER_BULB_TURN_OFF, SoundCategory.BLOCKS);
                 }catch(Exception e){
                     e.printStackTrace();
                 }

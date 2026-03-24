@@ -1,6 +1,6 @@
 package com.chenjunfu2;
 
-import com.chenjunfu2.blocks.SoundEvents;
+import com.chenjunfu2.sounds.ModSoundEvents;
 import com.chenjunfu2.blocks.RegistriesBlocks;
 import net.fabricmc.api.ModInitializer;
 
@@ -13,7 +13,7 @@ public class CopperBulbEarly implements ModInitializer {
 
 	@Override
 	public void onInitialize() {
-		SoundEvents.registerSoundEvents();
+		ModSoundEvents.registerSoundEvents();
 		RegistriesBlocks.RegistriesBlocks();
 	}
 }
