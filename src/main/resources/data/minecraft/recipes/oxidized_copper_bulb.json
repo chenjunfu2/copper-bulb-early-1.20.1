@@ -1,25 +1,18 @@
 {
   "type": "minecraft:crafting_shaped",
-  "group": "redstone",
+  "category": "redstone",
+  "key": {
+    "B": "minecraft:blaze_rod",
+    "C": "minecraft:oxidized_copper",
+    "R": "minecraft:redstone"
+  },
   "pattern": [
     " C ",
     "CBC",
     " R "
   ],
-  "key": {
-    "B": {
-      "item": "minecraft:blaze_rod"
-    },
-    "C": {
-      "item": "minecraft:oxidized_copper_block"
-    },
-    "R": {
-      "item": "minecraft:redstone"
-    }
-  },
   "result": {
-    "item": "minecraft:oxidized_copper_bulb",
-    "count": 4
-  },
-  "show_notification": true
+    "count": 4,
+    "id": "minecraft:oxidized_copper_bulb"
+  }
 }

@@ -3,7 +3,7 @@
   "category": "redstone",
   "key": {
     "B": "minecraft:blaze_rod",
-    "C": "minecraft:copper_block",
+    "C": "minecraft:waxed_exposed_copper",
     "R": "minecraft:redstone"
   },
   "pattern": [
@@ -13,6 +13,6 @@
   ],
   "result": {
     "count": 4,
-    "id": "minecraft:copper_bulb"
+    "id": "minecraft:waxed_exposed_copper_bulb"
   }
 }
