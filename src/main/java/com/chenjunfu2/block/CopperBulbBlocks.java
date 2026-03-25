@@ -1,10 +1,8 @@
 package com.chenjunfu2.block;
 
 import com.chenjunfu2.sounds.ModBlockSoundGroup;
-import com.google.common.base.Suppliers;
-import com.google.common.collect.BiMap;
-import com.google.common.collect.ImmutableBiMap;
 import net.fabricmc.fabric.api.itemgroup.v1.ItemGroupEvents;
+import net.fabricmc.fabric.api.registry.OxidizableBlocksRegistry;
 import net.minecraft.block.*;
 import net.minecraft.item.BlockItem;
 import net.minecraft.item.Item;
@@ -13,9 +11,6 @@ import net.minecraft.registry.Registries;
 import net.minecraft.registry.Registry;
 import net.minecraft.state.property.Properties;
 import net.minecraft.util.Identifier;
-import org.spongepowered.asm.mixin.Unique;
-
-import java.util.function.Supplier;
 import java.util.function.ToIntFunction;
 
 public class CopperBulbBlocks
@@ -103,28 +98,20 @@ public class CopperBulbBlocks
 		return block;
 	}
 	
-	
-	@Unique
-	public static Supplier<BiMap<Block, Block>> NEW_OXIDATION_LEVEL_INCREASES = null;
-	
-	@Unique
-	public static Supplier<BiMap<Block, Block>> NEW_OXIDATION_LEVEL_DECREASES = null;
-	
 	public static void RegistriesBlocks()
 	{
-		NEW_OXIDATION_LEVEL_INCREASES = Suppliers.memoize(
-			() -> ImmutableBiMap.<Block, Block>builder()
-			.put(CopperBulbBlocks.COPPER_BULB, CopperBulbBlocks.EXPOSED_COPPER_BULB)
-			.put(CopperBulbBlocks.EXPOSED_COPPER_BULB, CopperBulbBlocks.WEATHERED_COPPER_BULB)
-			.put(CopperBulbBlocks.WEATHERED_COPPER_BULB, CopperBulbBlocks.OXIDIZED_COPPER_BULB)
-			.build()
-		);
+		//注册氧化阶段
+		OxidizableBlocksRegistry.registerOxidizableBlockPair(CopperBulbBlocks.COPPER_BULB, CopperBulbBlocks.EXPOSED_COPPER_BULB);
+		OxidizableBlocksRegistry.registerOxidizableBlockPair(CopperBulbBlocks.EXPOSED_COPPER_BULB, CopperBulbBlocks.WEATHERED_COPPER_BULB);
+		OxidizableBlocksRegistry.registerOxidizableBlockPair(CopperBulbBlocks.WEATHERED_COPPER_BULB, CopperBulbBlocks.OXIDIZED_COPPER_BULB);
+
+		//注册涂蜡转换
+		OxidizableBlocksRegistry.registerWaxableBlockPair(CopperBulbBlocks.COPPER_BULB, CopperBulbBlocks.WAXED_COPPER_BULB);
+		OxidizableBlocksRegistry.registerWaxableBlockPair(CopperBulbBlocks.EXPOSED_COPPER_BULB, CopperBulbBlocks.WAXED_EXPOSED_COPPER_BULB);
+		OxidizableBlocksRegistry.registerWaxableBlockPair(CopperBulbBlocks.WEATHERED_COPPER_BULB, CopperBulbBlocks.WAXED_WEATHERED_COPPER_BULB);
+		OxidizableBlocksRegistry.registerWaxableBlockPair(CopperBulbBlocks.OXIDIZED_COPPER_BULB, CopperBulbBlocks.WAXED_OXIDIZED_COPPER_BULB);
 		
-		NEW_OXIDATION_LEVEL_DECREASES = Suppliers.memoize(
-			() -> (NEW_OXIDATION_LEVEL_INCREASES.get().inverse())
-		);
-		
-		
+		//注册创造物品栏
 		ItemGroupEvents.modifyEntriesEvent(ItemGroups.REDSTONE)
 			.register(content->
 			{
