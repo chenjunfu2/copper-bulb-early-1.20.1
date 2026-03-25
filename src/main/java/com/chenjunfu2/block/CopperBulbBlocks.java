@@ -41,6 +41,7 @@ public class CopperBulbBlocks
 			Oxidizable.OxidationLevel.EXPOSED,
 			AbstractBlock.Settings.copy(COPPER_BULB)
 				.mapColor(MapColor.TERRACOTTA_LIGHT_GRAY)
+				.solidBlock(Blocks::never)
 				.luminance(createLightLevelFromLitBlockState(12)
 				)
 		)
@@ -52,6 +53,7 @@ public class CopperBulbBlocks
 			Oxidizable.OxidationLevel.WEATHERED,
 			AbstractBlock.Settings.copy(COPPER_BULB)
 				.mapColor(MapColor.DARK_AQUA)
+				.solidBlock(Blocks::never)
 				.luminance(createLightLevelFromLitBlockState(8))
 		)
 	);
@@ -61,33 +63,34 @@ public class CopperBulbBlocks
 			Oxidizable.OxidationLevel.OXIDIZED,
 			AbstractBlock.Settings.copy(COPPER_BULB)
 				.mapColor(MapColor.TEAL)
+				.solidBlock(Blocks::never)
 				.luminance(createLightLevelFromLitBlockState(4))
 		)
 	);
 	public static final Block WAXED_COPPER_BULB = register(
 		"waxed_copper_bulb",
 		new BulbBlock(
-			AbstractBlock.Settings.copy(COPPER_BULB)
+			AbstractBlock.Settings.copy(COPPER_BULB).solidBlock(Blocks::never)
 		)
 	);
 	
 	public static final Block WAXED_EXPOSED_COPPER_BULB = register(
 		"waxed_exposed_copper_bulb",
 		new BulbBlock(
-			AbstractBlock.Settings.copy(EXPOSED_COPPER_BULB)
+			AbstractBlock.Settings.copy(EXPOSED_COPPER_BULB).solidBlock(Blocks::never)
 		)
 	);
 	
 	public static final Block WAXED_WEATHERED_COPPER_BULB = register(
 		"waxed_weathered_copper_bulb",
 		new BulbBlock(
-			AbstractBlock.Settings.copy(WEATHERED_COPPER_BULB)
+			AbstractBlock.Settings.copy(WEATHERED_COPPER_BULB).solidBlock(Blocks::never)
 		)
 	);
 	public static final Block WAXED_OXIDIZED_COPPER_BULB = register(
 		"waxed_oxidized_copper_bulb",
 		new BulbBlock(
-			AbstractBlock.Settings.copy(OXIDIZED_COPPER_BULB)
+			AbstractBlock.Settings.copy(OXIDIZED_COPPER_BULB).solidBlock(Blocks::never)
 		)
 	);
 	
