@@ -55,7 +55,8 @@ interface OxidizableMixin
 	
 	@WrapOperation(
 		method = "getDecreasedOxidationBlock",
-		at = @At(value = "INVOKE", target = "Lcom/google/common/collect/BiMap;get(Ljava/lang/Object;)Ljava/lang/Object;")
+		at = @At(value = "INVOKE", target = "Lcom/google/common/collect/BiMap;get(Ljava/lang/Object;)Ljava/lang/Object;"),
+		remap = false
 	)
 	private static Object getDecreasedOxidationBlockWrapOperation(BiMap instance, Object o, Operation<Object> original)
 	{
@@ -70,7 +71,8 @@ interface OxidizableMixin
 	
 	@WrapOperation(
 		method = "getIncreasedOxidationBlock",
-		at = @At(value = "INVOKE", target = "Lcom/google/common/collect/BiMap;get(Ljava/lang/Object;)Ljava/lang/Object;")
+		at = @At(value = "INVOKE", target = "Lcom/google/common/collect/BiMap;get(Ljava/lang/Object;)Ljava/lang/Object;"),
+		remap = false
 	)
 	private static Object getIncreasedOxidationBlockWrapOperation(BiMap instance, Object o, Operation<Object> original)
 	{
@@ -86,9 +88,8 @@ interface OxidizableMixin
 	
 	@WrapOperation(
 		method = "getUnaffectedOxidationBlock",
-		at = @At(value = "INVOKE",
-			target = "Lcom/google/common/collect/BiMap;get(Ljava/lang/Object;)Ljava/lang/Object;"
-		)
+		at = @At(value = "INVOKE", target = "Lcom/google/common/collect/BiMap;get(Ljava/lang/Object;)Ljava/lang/Object;"),
+		remap = false
 	)
 	private static Object getUnaffectedOxidationBlockWrapOperation(BiMap instance, Object o, Operation<Object> original)
 	{
