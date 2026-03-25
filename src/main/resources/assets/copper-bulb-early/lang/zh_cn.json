@@ -9,6 +9,9 @@
   "block.minecraft.waxed_weathered_copper_bulb": "涂蜡的锈蚀铜灯",
   "block.minecraft.waxed_oxidized_copper_bulb": "涂蜡的氧化铜灯",
 
+  "advancements.adventure.lighten_up.description": "用斧刮削铜灯来让它变得更亮",
+  "advancements.adventure.lighten_up.title": "铜光焕发",
+
   "subtitles.block.copper_bulb.turn_off": "铜灯：熄灭",
   "subtitles.block.copper_bulb.turn_on": "铜灯：亮起"
 }
