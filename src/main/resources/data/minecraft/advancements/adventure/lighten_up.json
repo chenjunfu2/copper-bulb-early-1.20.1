@@ -1,5 +1,5 @@
 {
-  "parent": "minecraft:adventure/minecraft_trials_edition",
+  "parent": "minecraft:adventure/root",
   "criteria": {
     "lighten_up": {
       "conditions": {
