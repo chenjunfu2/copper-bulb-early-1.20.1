@@ -1,0 +1,22 @@
+{
+  "criteria": {
+    "wax_off": {
+      "conditions": {
+        "location": [
+          {
+            "predicate": {
+              "block": {
+                "blocks": [
+                  "minecraft:waxed_copper_bulb",
+                  "minecraft:waxed_exposed_copper_bulb",
+                  "minecraft:waxed_weathered_copper_bulb",
+                  "minecraft:waxed_oxidized_copper_bulb"
+                ]
+              }
+            }
+          }
+        ]
+      }
+    }
+  }
+}
