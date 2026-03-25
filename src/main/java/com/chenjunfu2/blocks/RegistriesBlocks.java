@@ -102,9 +102,39 @@ public class RegistriesBlocks
 	
 	public static void RegistriesBlocks()
 	{
-		ItemGroupEvents.modifyEntriesEvent(ItemGroups.REDSTONE).register(content -> content.addAfter(Blocks.TARGET, RegistriesBlocks.WAXED_COPPER_BULB));
-		ItemGroupEvents.modifyEntriesEvent(ItemGroups.REDSTONE).register(content -> content.addAfter(RegistriesBlocks.WAXED_COPPER_BULB, RegistriesBlocks.WAXED_EXPOSED_COPPER_BULB));
-		ItemGroupEvents.modifyEntriesEvent(ItemGroups.REDSTONE).register(content -> content.addAfter(RegistriesBlocks.WAXED_EXPOSED_COPPER_BULB, RegistriesBlocks.WAXED_WEATHERED_COPPER_BULB));
-		ItemGroupEvents.modifyEntriesEvent(ItemGroups.REDSTONE).register(content -> content.addAfter(RegistriesBlocks.WAXED_WEATHERED_COPPER_BULB, RegistriesBlocks.WAXED_OXIDIZED_COPPER_BULB));
+		ItemGroupEvents.modifyEntriesEvent(ItemGroups.REDSTONE)
+			.register(content->
+			{
+				content.addAfter(Blocks.TARGET, RegistriesBlocks.WAXED_COPPER_BULB);
+				content.addAfter(RegistriesBlocks.WAXED_COPPER_BULB, RegistriesBlocks.WAXED_EXPOSED_COPPER_BULB);
+				content.addAfter(RegistriesBlocks.WAXED_EXPOSED_COPPER_BULB, RegistriesBlocks.WAXED_WEATHERED_COPPER_BULB);
+				content.addAfter(RegistriesBlocks.WAXED_WEATHERED_COPPER_BULB, RegistriesBlocks.WAXED_OXIDIZED_COPPER_BULB);
+			});
+		
+		ItemGroupEvents.modifyEntriesEvent(ItemGroups.BUILDING_BLOCKS)
+			.register(content->
+			{
+				content.addAfter(Blocks.CUT_COPPER_SLAB, RegistriesBlocks.COPPER_BULB);
+				content.addAfter(Blocks.EXPOSED_CUT_COPPER_SLAB, RegistriesBlocks.EXPOSED_COPPER_BULB);
+				content.addAfter(Blocks.WEATHERED_CUT_COPPER_SLAB, RegistriesBlocks.WEATHERED_COPPER_BULB);
+				content.addAfter(Blocks.OXIDIZED_CUT_COPPER_SLAB, RegistriesBlocks.OXIDIZED_COPPER_BULB);
+				content.addAfter(Blocks.WAXED_CUT_COPPER_SLAB, RegistriesBlocks.WAXED_COPPER_BULB);
+				content.addAfter(Blocks.WAXED_EXPOSED_CUT_COPPER_SLAB, RegistriesBlocks.WAXED_EXPOSED_COPPER_BULB);
+				content.addAfter(Blocks.WAXED_WEATHERED_CUT_COPPER_SLAB, RegistriesBlocks.WAXED_WEATHERED_COPPER_BULB);
+				content.addAfter(Blocks.WAXED_OXIDIZED_CUT_COPPER_SLAB, RegistriesBlocks.WAXED_OXIDIZED_COPPER_BULB);
+			});
+		
+		ItemGroupEvents.modifyEntriesEvent(ItemGroups.FUNCTIONAL)
+			.register(content->
+			{
+				content.addAfter(Blocks.REDSTONE_LAMP, RegistriesBlocks.COPPER_BULB);
+				content.addAfter(RegistriesBlocks.COPPER_BULB, RegistriesBlocks.EXPOSED_COPPER_BULB);
+				content.addAfter(RegistriesBlocks.EXPOSED_COPPER_BULB, RegistriesBlocks.WEATHERED_COPPER_BULB);
+				content.addAfter(RegistriesBlocks.WEATHERED_COPPER_BULB, RegistriesBlocks.OXIDIZED_COPPER_BULB);
+				content.addAfter(RegistriesBlocks.OXIDIZED_COPPER_BULB, RegistriesBlocks.WAXED_COPPER_BULB);
+				content.addAfter(RegistriesBlocks.WAXED_COPPER_BULB, RegistriesBlocks.WAXED_EXPOSED_COPPER_BULB);
+				content.addAfter(RegistriesBlocks.WAXED_EXPOSED_COPPER_BULB, RegistriesBlocks.WAXED_WEATHERED_COPPER_BULB);
+				content.addAfter(RegistriesBlocks.WAXED_WEATHERED_COPPER_BULB, RegistriesBlocks.WAXED_OXIDIZED_COPPER_BULB);
+			});
 	}
 }
