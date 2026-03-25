@@ -12,6 +12,6 @@
   "advancements.adventure.lighten_up.description": "Scrape a Copper Bulb with an Axe to make it brighter",
   "advancements.adventure.lighten_up.title": "Lighten Up",
 
-  "subtitles.block.copper_bulb.turn_off": "Copper Bulb: Clicks off",
-  "subtitles.block.copper_bulb.turn_on": "Copper Bulb: Clicks on"
+  "subtitles.block.copper_bulb.turn_off": "Copper Bulb turns off",
+  "subtitles.block.copper_bulb.turn_on": "Copper Bulb turns on"
 }
