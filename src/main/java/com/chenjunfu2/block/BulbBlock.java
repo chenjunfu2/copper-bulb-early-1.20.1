@@ -1,4 +1,4 @@
-package com.chenjunfu2.blocks;
+package com.chenjunfu2.block;
 
 import com.chenjunfu2.sounds.ModSoundEvents;
 import net.minecraft.block.AbstractBlock;

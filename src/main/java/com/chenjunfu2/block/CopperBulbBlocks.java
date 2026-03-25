@@ -1,4 +1,4 @@
-package com.chenjunfu2.blocks;
+package com.chenjunfu2.block;
 
 import com.chenjunfu2.sounds.ModBlockSoundGroup;
 import net.fabricmc.fabric.api.itemgroup.v1.ItemGroupEvents;
@@ -13,9 +13,7 @@ import net.minecraft.util.Identifier;
 
 import java.util.function.ToIntFunction;
 
-import static net.minecraft.block.Blocks.COPPER_BLOCK;
-
-public class RegistriesBlocks
+public class CopperBulbBlocks
 {
 	public static ToIntFunction<BlockState> createLightLevelFromLitBlockState(int litLevel)
 	{
@@ -27,7 +25,7 @@ public class RegistriesBlocks
 		new OxidizableBulbBlock(
 			Oxidizable.OxidationLevel.UNAFFECTED,
 			AbstractBlock.Settings.create()
-				.mapColor(COPPER_BLOCK.getDefaultMapColor())
+				.mapColor(MapColor.ORANGE)
 				.strength(3.0F, 6.0F)
 				.sounds(ModBlockSoundGroup.COPPER_BULB)
 				.requiresTool()
@@ -95,46 +93,48 @@ public class RegistriesBlocks
 	
 	private static <T extends Block> T register(String path, T block)
 	{
+		Registry.register(Registries.BLOCK, new Identifier(path), block);
 		Registry.register(Registries.ITEM, new Identifier(path), new BlockItem(block, new Item.Settings()));
-		return Registry.register(Registries.BLOCK, new Identifier(path), block);
+		return block;
 	}
 	
+	public static void init() {}
 	
 	public static void RegistriesBlocks()
 	{
 		ItemGroupEvents.modifyEntriesEvent(ItemGroups.REDSTONE)
 			.register(content->
 			{
-				content.addAfter(Blocks.TARGET, RegistriesBlocks.WAXED_COPPER_BULB);
-				content.addAfter(RegistriesBlocks.WAXED_COPPER_BULB, RegistriesBlocks.WAXED_EXPOSED_COPPER_BULB);
-				content.addAfter(RegistriesBlocks.WAXED_EXPOSED_COPPER_BULB, RegistriesBlocks.WAXED_WEATHERED_COPPER_BULB);
-				content.addAfter(RegistriesBlocks.WAXED_WEATHERED_COPPER_BULB, RegistriesBlocks.WAXED_OXIDIZED_COPPER_BULB);
+				content.addAfter(Blocks.TARGET, CopperBulbBlocks.WAXED_COPPER_BULB);
+				content.addAfter(CopperBulbBlocks.WAXED_COPPER_BULB, CopperBulbBlocks.WAXED_EXPOSED_COPPER_BULB);
+				content.addAfter(CopperBulbBlocks.WAXED_EXPOSED_COPPER_BULB, CopperBulbBlocks.WAXED_WEATHERED_COPPER_BULB);
+				content.addAfter(CopperBulbBlocks.WAXED_WEATHERED_COPPER_BULB, CopperBulbBlocks.WAXED_OXIDIZED_COPPER_BULB);
 			});
 		
 		ItemGroupEvents.modifyEntriesEvent(ItemGroups.BUILDING_BLOCKS)
 			.register(content->
 			{
-				content.addAfter(Blocks.CUT_COPPER_SLAB, RegistriesBlocks.COPPER_BULB);
-				content.addAfter(Blocks.EXPOSED_CUT_COPPER_SLAB, RegistriesBlocks.EXPOSED_COPPER_BULB);
-				content.addAfter(Blocks.WEATHERED_CUT_COPPER_SLAB, RegistriesBlocks.WEATHERED_COPPER_BULB);
-				content.addAfter(Blocks.OXIDIZED_CUT_COPPER_SLAB, RegistriesBlocks.OXIDIZED_COPPER_BULB);
-				content.addAfter(Blocks.WAXED_CUT_COPPER_SLAB, RegistriesBlocks.WAXED_COPPER_BULB);
-				content.addAfter(Blocks.WAXED_EXPOSED_CUT_COPPER_SLAB, RegistriesBlocks.WAXED_EXPOSED_COPPER_BULB);
-				content.addAfter(Blocks.WAXED_WEATHERED_CUT_COPPER_SLAB, RegistriesBlocks.WAXED_WEATHERED_COPPER_BULB);
-				content.addAfter(Blocks.WAXED_OXIDIZED_CUT_COPPER_SLAB, RegistriesBlocks.WAXED_OXIDIZED_COPPER_BULB);
+				content.addAfter(Blocks.CUT_COPPER_SLAB, CopperBulbBlocks.COPPER_BULB);
+				content.addAfter(Blocks.EXPOSED_CUT_COPPER_SLAB, CopperBulbBlocks.EXPOSED_COPPER_BULB);
+				content.addAfter(Blocks.WEATHERED_CUT_COPPER_SLAB, CopperBulbBlocks.WEATHERED_COPPER_BULB);
+				content.addAfter(Blocks.OXIDIZED_CUT_COPPER_SLAB, CopperBulbBlocks.OXIDIZED_COPPER_BULB);
+				content.addAfter(Blocks.WAXED_CUT_COPPER_SLAB, CopperBulbBlocks.WAXED_COPPER_BULB);
+				content.addAfter(Blocks.WAXED_EXPOSED_CUT_COPPER_SLAB, CopperBulbBlocks.WAXED_EXPOSED_COPPER_BULB);
+				content.addAfter(Blocks.WAXED_WEATHERED_CUT_COPPER_SLAB, CopperBulbBlocks.WAXED_WEATHERED_COPPER_BULB);
+				content.addAfter(Blocks.WAXED_OXIDIZED_CUT_COPPER_SLAB, CopperBulbBlocks.WAXED_OXIDIZED_COPPER_BULB);
 			});
 		
 		ItemGroupEvents.modifyEntriesEvent(ItemGroups.FUNCTIONAL)
 			.register(content->
 			{
-				content.addAfter(Blocks.REDSTONE_LAMP, RegistriesBlocks.COPPER_BULB);
-				content.addAfter(RegistriesBlocks.COPPER_BULB, RegistriesBlocks.EXPOSED_COPPER_BULB);
-				content.addAfter(RegistriesBlocks.EXPOSED_COPPER_BULB, RegistriesBlocks.WEATHERED_COPPER_BULB);
-				content.addAfter(RegistriesBlocks.WEATHERED_COPPER_BULB, RegistriesBlocks.OXIDIZED_COPPER_BULB);
-				content.addAfter(RegistriesBlocks.OXIDIZED_COPPER_BULB, RegistriesBlocks.WAXED_COPPER_BULB);
-				content.addAfter(RegistriesBlocks.WAXED_COPPER_BULB, RegistriesBlocks.WAXED_EXPOSED_COPPER_BULB);
-				content.addAfter(RegistriesBlocks.WAXED_EXPOSED_COPPER_BULB, RegistriesBlocks.WAXED_WEATHERED_COPPER_BULB);
-				content.addAfter(RegistriesBlocks.WAXED_WEATHERED_COPPER_BULB, RegistriesBlocks.WAXED_OXIDIZED_COPPER_BULB);
+				content.addAfter(Blocks.REDSTONE_LAMP, CopperBulbBlocks.COPPER_BULB);
+				content.addAfter(CopperBulbBlocks.COPPER_BULB, CopperBulbBlocks.EXPOSED_COPPER_BULB);
+				content.addAfter(CopperBulbBlocks.EXPOSED_COPPER_BULB, CopperBulbBlocks.WEATHERED_COPPER_BULB);
+				content.addAfter(CopperBulbBlocks.WEATHERED_COPPER_BULB, CopperBulbBlocks.OXIDIZED_COPPER_BULB);
+				content.addAfter(CopperBulbBlocks.OXIDIZED_COPPER_BULB, CopperBulbBlocks.WAXED_COPPER_BULB);
+				content.addAfter(CopperBulbBlocks.WAXED_COPPER_BULB, CopperBulbBlocks.WAXED_EXPOSED_COPPER_BULB);
+				content.addAfter(CopperBulbBlocks.WAXED_EXPOSED_COPPER_BULB, CopperBulbBlocks.WAXED_WEATHERED_COPPER_BULB);
+				content.addAfter(CopperBulbBlocks.WAXED_WEATHERED_COPPER_BULB, CopperBulbBlocks.WAXED_OXIDIZED_COPPER_BULB);
 			});
 	}
 }

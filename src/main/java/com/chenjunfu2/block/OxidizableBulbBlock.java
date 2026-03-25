@@ -1,4 +1,4 @@
-package com.chenjunfu2.blocks;
+package com.chenjunfu2.block;
 
 import net.minecraft.block.AbstractBlock;
 import net.minecraft.block.BlockState;
