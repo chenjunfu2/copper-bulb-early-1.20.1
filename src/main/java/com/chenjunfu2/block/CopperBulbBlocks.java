@@ -11,6 +11,9 @@ import net.minecraft.registry.Registries;
 import net.minecraft.registry.Registry;
 import net.minecraft.state.property.Properties;
 import net.minecraft.util.Identifier;
+import net.minecraft.util.math.BlockPos;
+import net.minecraft.world.BlockView;
+
 import java.util.function.ToIntFunction;
 
 public class CopperBulbBlocks
@@ -18,6 +21,11 @@ public class CopperBulbBlocks
 	public static ToIntFunction<BlockState> createLightLevelFromLitBlockState(int litLevel)
 	{
 		return state -> state.get(Properties.LIT) ? litLevel : 0;
+	}
+	
+	public static boolean never(BlockState state, BlockView world, BlockPos pos)
+	{
+		return false;
 	}
 	
 	public static final Block COPPER_BULB = register(
@@ -29,7 +37,7 @@ public class CopperBulbBlocks
 				.strength(3.0F, 6.0F)
 				.sounds(ModBlockSoundGroup.COPPER_BULB)
 				.requiresTool()
-				.solidBlock(Blocks::never)
+				.solidBlock(CopperBulbBlocks::never)
 				.luminance(createLightLevelFromLitBlockState(15)
 			)
 		)
@@ -41,7 +49,7 @@ public class CopperBulbBlocks
 			Oxidizable.OxidationLevel.EXPOSED,
 			AbstractBlock.Settings.copy(COPPER_BULB)
 				.mapColor(MapColor.TERRACOTTA_LIGHT_GRAY)
-				.solidBlock(Blocks::never)
+				.solidBlock(CopperBulbBlocks::never)
 				.luminance(createLightLevelFromLitBlockState(12)
 				)
 		)
@@ -53,7 +61,7 @@ public class CopperBulbBlocks
 			Oxidizable.OxidationLevel.WEATHERED,
 			AbstractBlock.Settings.copy(COPPER_BULB)
 				.mapColor(MapColor.DARK_AQUA)
-				.solidBlock(Blocks::never)
+				.solidBlock(CopperBulbBlocks::never)
 				.luminance(createLightLevelFromLitBlockState(8))
 		)
 	);
@@ -63,34 +71,34 @@ public class CopperBulbBlocks
 			Oxidizable.OxidationLevel.OXIDIZED,
 			AbstractBlock.Settings.copy(COPPER_BULB)
 				.mapColor(MapColor.TEAL)
-				.solidBlock(Blocks::never)
+				.solidBlock(CopperBulbBlocks::never)
 				.luminance(createLightLevelFromLitBlockState(4))
 		)
 	);
 	public static final Block WAXED_COPPER_BULB = register(
 		"waxed_copper_bulb",
 		new BulbBlock(
-			AbstractBlock.Settings.copy(COPPER_BULB).solidBlock(Blocks::never)
+			AbstractBlock.Settings.copy(COPPER_BULB).solidBlock(CopperBulbBlocks::never)
 		)
 	);
 	
 	public static final Block WAXED_EXPOSED_COPPER_BULB = register(
 		"waxed_exposed_copper_bulb",
 		new BulbBlock(
-			AbstractBlock.Settings.copy(EXPOSED_COPPER_BULB).solidBlock(Blocks::never)
+			AbstractBlock.Settings.copy(EXPOSED_COPPER_BULB).solidBlock(CopperBulbBlocks::never)
 		)
 	);
 	
 	public static final Block WAXED_WEATHERED_COPPER_BULB = register(
 		"waxed_weathered_copper_bulb",
 		new BulbBlock(
-			AbstractBlock.Settings.copy(WEATHERED_COPPER_BULB).solidBlock(Blocks::never)
+			AbstractBlock.Settings.copy(WEATHERED_COPPER_BULB).solidBlock(CopperBulbBlocks::never)
 		)
 	);
 	public static final Block WAXED_OXIDIZED_COPPER_BULB = register(
 		"waxed_oxidized_copper_bulb",
 		new BulbBlock(
-			AbstractBlock.Settings.copy(OXIDIZED_COPPER_BULB).solidBlock(Blocks::never)
+			AbstractBlock.Settings.copy(OXIDIZED_COPPER_BULB).solidBlock(CopperBulbBlocks::never)
 		)
 	);
 	

@@ -24,16 +24,9 @@ loom {
 	mods {
 		"copper-bulb-early" {
 			sourceSet sourceSets.main
-			sourceSet sourceSets.client
 		}
 	}
 
-}
-
-fabricApi {
-	configureDataGeneration {
-		client = true
-	}
 }
 
 dependencies {
