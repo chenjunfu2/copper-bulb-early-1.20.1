@@ -1,4 +1,7 @@
 # Copper Bulb Ealy
+[![GitHub Releases](https://shields.io/github/v/release/chenjunfu2/copper-bulb-early-1.20.1)](https://github.com/chenjunfu2/copper-bulb-early-1.20.1/releases)
+[![GitHub Releases downloads](https://shields.io/github/downloads/chenjunfu2/copper-bulb-early-1.20.1/total)](https://github.com/chenjunfu2/copper-bulb-early-1.20.1/releases)
+[![GitHub Repo stars](https://shields.io/github/stars/chenjunfu2/copper-bulb-early-1.20.1)](https://github.com/chenjunfu2/copper-bulb-early-1.20.1/)  
 ![icon.png](src/main/resources/assets/minecraft/textures/block/copper_bulb_lit.png)
 这是一个将 ``1.21.4 铜灯(Copper Bulb)`` 完美移植到 ``1.20.1`` 的模组，将铜灯完整特性与成就带回 1.20.1。  
 因为mod使用了原版名称空间和数据格式，所以可以与Litematica Mod读取的高版本投影内的铜灯兼容，同时升级存档也能被高版本识别并保留。  
