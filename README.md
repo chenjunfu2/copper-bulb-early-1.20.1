@@ -12,9 +12,9 @@
 **多人服务器**：**``服务端``** 与 **``客户端``** 均必须安装  
 **单人游戏**：仅需 **``客户端``** 安装   
   
-**注意**：
-如果仅在服务器安装而客户端未安装，连接服务器时会出现“模组缺失”或方块 ID 无法解析的问题。  
-如果仅在客户端安装，则可以正常进入无此Mod的服务器（Mod方块不生效）。   
+**注意**：  
+- 如果仅在服务器安装而客户端未安装，连接服务器时会出现 **“模组缺失”** 或 **方块ID无法解析** 等问题。  
+- 如果仅在客户端安装，**可以正常进入未安装此Mod的服务器** （在此服务器中客户端Mod方块不生效）。   
 
 ## Star History
 [![Star History Chart](https://api.star-history.com/image?repos=chenjunfu2/copper-bulb-early-1.20.1&type=date&legend=top-left)](https://www.star-history.com/?repos=chenjunfu2%2Fcopper-bulb-early-1.20.1&type=date&legend=top-left)  
