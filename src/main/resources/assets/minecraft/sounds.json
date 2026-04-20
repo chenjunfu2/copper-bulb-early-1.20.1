@@ -1,0 +1,71 @@
+{
+  "block.copper_bulb.break": {
+    "sounds": [
+      "block/copper_bulb/break1",
+      "block/copper_bulb/break2",
+      "block/copper_bulb/break3",
+      "block/copper_bulb/break4"
+    ],
+    "subtitle": "subtitles.block.generic.break"
+  },
+  "block.copper_bulb.fall": {
+    "sounds": [
+      "block/copper_bulb/step1",
+      "block/copper_bulb/step2",
+      "block/copper_bulb/step3",
+      "block/copper_bulb/step4",
+      "block/copper_bulb/step5",
+      "block/copper_bulb/step6"
+    ]
+  },
+  "block.copper_bulb.hit": {
+    "sounds": [
+      "block/copper_bulb/step1",
+      "block/copper_bulb/step2",
+      "block/copper_bulb/step3",
+      "block/copper_bulb/step4",
+      "block/copper_bulb/step5",
+      "block/copper_bulb/step6"
+    ],
+    "subtitle": "subtitles.block.generic.hit"
+  },
+  "block.copper_bulb.place": {
+    "sounds": [
+      "block/copper_bulb/place1",
+      "block/copper_bulb/place2",
+      "block/copper_bulb/place3",
+      "block/copper_bulb/place4"
+    ],
+    "subtitle": "subtitles.block.generic.place"
+  },
+  "block.copper_bulb.step": {
+    "sounds": [
+      "block/copper_bulb/step1",
+      "block/copper_bulb/step2",
+      "block/copper_bulb/step3",
+      "block/copper_bulb/step4",
+      "block/copper_bulb/step5",
+      "block/copper_bulb/step6"
+    ],
+    "subtitle": "subtitles.block.generic.footsteps"
+  },
+  "block.copper_bulb.turn_off": {
+    "sounds": [
+      {
+        "attenuation_distance": 6,
+        "name": "block/copper_bulb/toggle",
+        "pitch": 0.75
+      }
+    ],
+    "subtitle": "subtitles.block.copper_bulb.turn_off"
+  },
+  "block.copper_bulb.turn_on": {
+    "sounds": [
+      {
+        "attenuation_distance": 6,
+        "name": "block/copper_bulb/toggle"
+      }
+    ],
+    "subtitle": "subtitles.block.copper_bulb.turn_on"
+  }
+}
