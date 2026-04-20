@@ -5,8 +5,6 @@ import net.minecraft.registry.Registry;
 import net.minecraft.sound.SoundEvent;
 import net.minecraft.util.Identifier;
 
-import static com.chenjunfu2.CopperBulbEarly.MOD_ID;
-
 public class ModSoundEvents
 {
 	public static final SoundEvent BLOCK_COPPER_BULB_BREAK = register("block.copper_bulb.break");
@@ -19,7 +17,7 @@ public class ModSoundEvents
 
     private static SoundEvent register(String name)
 	{
-        Identifier id = new Identifier(MOD_ID, name);
+        Identifier id = new Identifier(name);
         return Registry.register(Registries.SOUND_EVENT, id, SoundEvent.of(id));
     }
 
