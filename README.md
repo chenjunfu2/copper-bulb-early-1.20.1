@@ -4,11 +4,20 @@
 [![GitHub Repo stars](https://shields.io/github/stars/chenjunfu2/copper-bulb-early-1.20.1)](https://github.com/chenjunfu2/copper-bulb-early-1.20.1)  
 这是一个将 **``Minecraft 1.21.4 铜灯(Copper Bulb)``**![icon.png](src/main/resources/assets/minecraft/textures/block/copper_bulb_lit.png) 完美移植到 **``Minecraft 1.20.1``** 的模组，将铜灯完整特性与成就带回 **``Minecraft 1.20.1``** 。  
 因为mod使用了原版名称空间和数据格式，所以可以与Litematica Mod读取的高版本投影内的铜灯兼容，同时升级存档也能被高版本识别并保留。  
-  
+
+## 说明
+这个项目由[Rczlin-bulb-early-1.20.1](https://github.com/Rczlin/bulb-early-1.20.1)修改而来  
+
+**相比原先的移植mod：**
+- 修复铜灯不能受到随机刻事件氧化的问题
+- 修复资源文件为原版名称空间以兼容资源包
+- 新增所有铜灯变种的移植
+- 新增相关进度的移植
+
 ## 环境要求
 **游戏版本**：**``Minecraft 1.20.1``**  
 **加载器版本**：**``Fabric 0.14.22+``**  
-**Fabric API**: **``0.92.3+``** (自0.92.3版本起，修复了一个可能导致此模组出现问题的bug)  
+**Fabric API**: **``0.92.3+``** （自0.92.3版本起，修复了一个可能导致此模组出现问题的bug）  
 **多人游戏**：**``服务端``** 与 **``客户端``** 均必须安装  
 **单人游戏**：仅需 **``客户端``** 安装   
 
